@@ -17,6 +17,8 @@ echo.
 echo ========================================================================================================================
 echo.
 (cd && curl -O https://raw.githubusercontent.com/mrc2rules/IGCSE_PastPapers_Opener/main/PastPaperOpener.bat)
+cls
+pause
 :menu
 set /p Subject=Enter subject code: 
 IF /i "%Subject%" == "UPDATE" GOTO update
