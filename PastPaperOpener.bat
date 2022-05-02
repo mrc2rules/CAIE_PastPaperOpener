@@ -27,9 +27,11 @@ set /p Session=Enter letter(FM is m, MJ is s, ON is w):
 set /p Year=Enter year of paper: 
 set /p Type=Is it ms or qp?: 
 set /p Paper=Enter variant: 
+echo.
 echo. The paper you have selected is %Subject%_%Session%%Year%_%Type%_%Paper%
+echo.
 :confirm
-SET /P sure=Open Paper? (y/n)
+SET /P sure=Open Paper? (y/n):
 IF /I "%sure%" NEQ "y" goto :N
 :open
 echo Opening...
