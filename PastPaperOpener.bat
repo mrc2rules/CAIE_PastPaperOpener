@@ -2,11 +2,14 @@
 echo ========================================================================================================================
 echo.
 echo                  Welcome! Make sure to enter everything in small case. Made by Rahbab Chowdhury ©2022
-echo.
+echo.                                      Type UPDATE if you wish to check for updates
+echo.                                               
+ECHO.                                                        v1.0
 echo ========================================================================================================================
 echo.
 :start
 set /p Subject=Enter subject code: 
+IF /i "%Subject%" == "UPDATE" GOTO update
 set /p Session=Enter letter(FM is m, MJ is s, ON is w): 
 set /p Year=Enter year of paper: 
 set /p Type=Is it ms or qp?: 
@@ -25,3 +28,13 @@ echo ok dumbass, don't waste you time. do sums
 timeout /t 5
 cls
 goto :start
+:update
+cls
+echo ========================================================================================================================
+echo.
+echo                             Updating....Please Wait. Reopen application after it closes
+echo.
+echo ========================================================================================================================
+echo.
+(cd && curl -O https://raw.githubusercontent.com/mrc2rules/IGCSE_PastPapers_Opener/main/PastPaperOpener.bat) 
+
