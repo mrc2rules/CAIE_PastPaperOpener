@@ -5,7 +5,7 @@ echo.
 echo                  Welcome! Make sure to enter everything in small case. Made by Rahbab Chowdhury ©2022
 echo.                                      Type UPDATE if you wish to check for updates
 echo.                                               
-ECHO.                                                        v1.0
+ECHO.                          v1.0 [Changelog: Program now displays which paper you've selected]
 echo ========================================================================================================================
 echo.
 set /p Subject=Enter subject code: 
