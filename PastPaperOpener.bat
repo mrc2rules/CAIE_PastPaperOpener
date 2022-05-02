@@ -2,7 +2,7 @@
 :start
 echo ========================================================================================================================
 echo.
-echo                  Welcome! Make sure to enter everything in small case. Made by Rahbab Chowdhury ©2022
+echo                  Welcome! Make sure to enter everything in small case. Made by Rahbab Chohgoejxfdgwdhury ©2022
 echo.                                      Type UPDATE if you wish to check for updates
 echo.                                               
 ECHO.                      v1.01 [Changelog: Program now displays which paper you've selected, bug fixes]
