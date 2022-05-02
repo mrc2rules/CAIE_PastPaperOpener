@@ -1,4 +1,5 @@
 @echo off
+:start
 echo ========================================================================================================================
 echo.
 echo                  Welcome! Make sure to enter everything in small case. Made by Rahbab Chowdhury ©2022
@@ -7,14 +8,13 @@ echo.
 ECHO.                                                        v1.0
 echo ========================================================================================================================
 echo.
-:start
 set /p Subject=Enter subject code: 
 IF /i "%Subject%" == "UPDATE" GOTO update
 set /p Session=Enter letter(FM is m, MJ is s, ON is w): 
 set /p Year=Enter year of paper: 
 set /p Type=Is it ms or qp?: 
 set /p Paper=Enter variant: 
-echo.
+echo. The paper you have selected is %Subject%_%Session%%Year%_%Type%_%Paper%
 :confirm
 SET /P sure=Open Paper? (y/n)
 IF /I "%sure%" NEQ "y" goto :N
