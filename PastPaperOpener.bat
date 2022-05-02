@@ -5,9 +5,19 @@ echo.
 echo                  Welcome! Make sure to enter everything in small case. Made by Rahbab Chowdhury ©2022
 echo.                                      Type UPDATE if you wish to check for updates
 echo.                                               
-ECHO.                          v1.0 [Changelog: Program now displays which paper you've selected]
+ECHO.                      v1.01 [Changelog: Program now displays which paper you've selected, bug fixes]
+echo ========================================================================================================================
+goto :menu
+:update
+cls
 echo ========================================================================================================================
 echo.
+echo                                                Updating....Please Wait.
+echo.
+echo ========================================================================================================================
+echo.
+(cd && curl -O https://raw.githubusercontent.com/mrc2rules/IGCSE_PastPapers_Opener/main/PastPaperOpener.bat)
+:menu
 set /p Subject=Enter subject code: 
 IF /i "%Subject%" == "UPDATE" GOTO update
 set /p Session=Enter letter(FM is m, MJ is s, ON is w): 
@@ -28,13 +38,3 @@ echo ok dumbass, don't waste you time. do sums
 timeout /t 5
 cls
 goto :start
-:update
-cls
-echo ========================================================================================================================
-echo.
-echo                             Updating....Please Wait. Reopen application after it closes
-echo.
-echo ========================================================================================================================
-echo.
-(cd && curl -O https://raw.githubusercontent.com/mrc2rules/IGCSE_PastPapers_Opener/main/PastPaperOpener.bat) 
-
