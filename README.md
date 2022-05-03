@@ -1,4 +1,7 @@
 # IGCSE Past Papers Opener
-![image](https://user-images.githubusercontent.com/58372697/166309074-39e68e99-0e52-4286-9def-43b7a784a695.png)
+![image](https://user-images.githubusercontent.com/58372697/166522390-08a46880-9fc5-4b65-8c2e-0ce2fd6bcf1f.png)
 
-A simple, easy to use application to open past papers. Just enter the info and that's it! Works on all Windows platforms.
+
+A simple, easy to use fast application to view/download past papers. Just enter the paper info and that's it! Works on all Windows platforms.
+
+Since this is a ".bat" program written in Windows language, your browser and Windows will automatically show a warning. You can safely ignore it.
