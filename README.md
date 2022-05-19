@@ -1,5 +1,5 @@
 # IGCSE Past Papers Opener
-![image](https://user-images.githubusercontent.com/58372697/166522390-08a46880-9fc5-4b65-8c2e-0ce2fd6bcf1f.png)
+![image](https://user-images.githubusercontent.com/58372697/169236179-addd6e0c-18fd-488a-bab4-228cf83ee4b0.png)
 
 
 A fast, easy to use application to view/download past papers. Just enter the paper info and that's it! Works on all Windows platforms.
