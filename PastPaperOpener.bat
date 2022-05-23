@@ -16,8 +16,8 @@ cls
 if errorlevel 1 set int=NO INTERNET AVAILABLE!
 ::Updator
 for /F %%I in ('curl -sS https://raw.githubusercontent.com/mrc2rules/IGCSE_PastPapers_Opener/main/version.txt') do set up=%%I
-if not %up%==%vers% set notif=Update Available!(%up%)
-if %up%==%vers% set notif=Up to date!
+if not %up%==%vers% set notif=Update Available!(v%up%)
+if %up%==%vers% set notif=Program up to date!
 :: Home Page
 :start
 echo.===========================================================================================
