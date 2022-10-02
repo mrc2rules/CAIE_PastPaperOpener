@@ -6,9 +6,11 @@
 ![](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
 A fast, easy to use application to view/download past papers. Just enter the paper info and that's it! Works on all Windows platforms.
-It's under 5KB!!
+It's under 5KB!
 
-Since this is a ".bat" program written in Windows language, your browser and Windows will automatically show a warning. You can safely ignore it.
+Since this is a ".bat" file, your browser and Windows will automatically show a warning. You can safely ignore it.
+Few bugs present, sorry about that
+
 Download => https://github.com/mrc2rules/IGCSE_PastPapers_Opener/releases/
 
 ## Screenshots
