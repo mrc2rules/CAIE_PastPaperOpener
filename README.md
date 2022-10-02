@@ -1,8 +1,7 @@
 # IGCSE Past Papers Opener
 
-![](https://img.shields.io/github/downloads/mrc2rules/IGCSE_PastPapers_Opener/total.svg?style=for-the-badge&color=2B87D3)
-![](https://badge-size.herokuapp.com/mrc2rules/IGCSE_PastPapers_Opener/main/PastPaperOpener.bat?style=for-the-badge&color=2B87D3)
-![](https://img.shields.io/badge/Download-Click%20Here-red?style=for-the-badge&color=F62451&link=http://left&link=https://github.com/mrc2rules/IGCSE_PastPapers_Opener/releases/download/v1.22/PastPaperOpener.bat)
+![](https://img.shields.io/github/downloads/mrc2rules/IGCSE_PastPapers_Opener/total.svg?style=for-the-badge&color=F62451)
+![](https://badge-size.herokuapp.com/mrc2rules/IGCSE_PastPapers_Opener/main/PastPaperOpener.bat?style=for-the-badge&color=F62451)
 
 ![](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
