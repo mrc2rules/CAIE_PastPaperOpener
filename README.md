@@ -14,4 +14,5 @@ Few bugs present, sorry about that
 Download => https://github.com/mrc2rules/IGCSE_PastPapers_Opener/releases/
 
 ## Screenshots
-![image](https://user-images.githubusercontent.com/58372697/169236179-addd6e0c-18fd-488a-bab4-228cf83ee4b0.png)
+![image](https://user-images.githubusercontent.com/58372697/195889322-56ffe344-a946-4a40-9a03-d0eb25ee2c0f.png)
+
