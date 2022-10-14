@@ -1,4 +1,4 @@
-# IGCSE Past Papers Opener
+# CAIE Past Papers Opener
 
 ![](https://img.shields.io/github/downloads/mrc2rules/IGCSE_PastPapers_Opener/total.svg?style=for-the-badge&color=F62451)
 ![](https://badge-size.herokuapp.com/mrc2rules/IGCSE_PastPapers_Opener/main/PastPaperOpener.bat?style=for-the-badge&color=F62451)
