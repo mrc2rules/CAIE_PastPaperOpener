@@ -1,78 +1,73 @@
 @echo off
-title IGCSE PastPaperOpener 
-MODE CON:COLS=91 LINES=30
+title CAIE PastPaperOpener 
+MODE CON:COLS=93 LINES=32
 :: Sets undefined variables
-set theme=Dark
 set mode=View
-set vers=1.22
-set Subject=0000
-set Session=x
-set Year=00
-set Type=xx
-set Paper=00
+set vers=1.3
+
 ::Internet Check
 ping www.google.com -n 1 -w 1000 > nul
 cls
 if errorlevel 1 set int=NO INTERNET AVAILABLE!
 ::Updator
 for /F %%I in ('curl -sS https://raw.githubusercontent.com/mrc2rules/IGCSE_PastPapers_Opener/main/version.txt') do set up=%%I
-if not %up%==%vers% set notif=Update Available!(v%up%)
-if %up%==%vers% set notif=Program up to date!
+if "%up%" gtr "%vers%" set notif=Update Available!(v%up%)
 :: Home Page
 :start
-echo.===========================================================================================
-echo. %int%
-echo.             Welcome! IGCSE Past Paper Opener. Created by Rahbab Chowdhury 2022
-echo.                                   
-echo.            +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-echo.            +                                                                   +
-echo.            +                   Mode: Papers will be %mode%ed                     +
-echo.            +                                                                   +
-echo.            +                   Last Paper: %Subject%_%Session%%Year%_%Type%_%Paper%                      +
-echo.            +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-echo.
-echo.
-echo.                                     ^>^>^>  Options ^<^<^<
-echo.
-echo.     [Mode: Download^|View] [Theme: Dark^|Light] [Having problems? Type "Help"] [About]
-echo.                                %notif%
-echo.
-echo.[Version %vers%]                                                              %theme% Theme
-echo.===========================================================================================
-echo.
+echo/=============================================================================================
+echo/ %int%
+echo/             Welcome! CAIE Past Paper Opener.            Made with ^<3 by Rahbab!
+echo/                                   
+echo/            +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+echo/            +                                                                   +
+echo/                                Mode: Papers will be %mode%ed
+echo/                                Last Paper: %Subject%_%Session%%Year%_%Type%_%Paper%
+echo/            +                                                                   +
+echo/            +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+echo/
+echo/
+echo/                                     ^>^>^>  Options ^<^<^<
+echo/
+echo/                 [Mode: Download^|View] [Having problems? Type "Help"] [About]
+echo/
+echo/
+echo/[Version %vers%]                                                       %notif%
+echo/=============================================================================================
+echo/
 goto :menu
 ::Help Menu
 :about
-echo.===========================================================================================
-echo.
-echo.                                          About
-echo. 
-echo.        - This program was created using batch :)
-echo.        - No, this program does not miraculously make your internet faster, It merely     
-echo.          saves you a few clicks from having to manually open the browser and all.  
-echo.            
-echo.            
-echo.        
-echo.
-echo.
-echo.                                     
-echo.
-echo.         
-echo.
-echo.
-echo.[Version %vers%]                                                              %theme% Theme
-echo.===========================================================================================
+echo/=============================================================================================
+echo/
+echo/                                          About
+echo/ 
+echo/        - This program was created using batch :)
+echo/        - No, this program does not miraculously make your internet faster, It merely     
+echo/          saves you a few clicks from having to manually open the browser and all.  
+echo/            
+echo/            
+echo/        
+echo/
+echo/
+echo/                                     
+echo/
+echo/         
+echo/
+echo/
+echo/[Version %vers%]
+echo/=============================================================================================
 pause
+cls
 goto :start
 :: Updator
 :update
 cls
-echo.==========================================================================================
-echo.
-echo                          ^>^>^> Updating....Please Wait ^<^<^<
-echo.
-echo.==========================================================================================
-echo.
+echo/============================================================================================
+echo/
+echo/                         ^>^>^> Updating....Please Wait ^<^<^<
+echo/
+echo/============================================================================================
+echo/
 (cd && curl -O https://raw.githubusercontent.com/mrc2rules/IGCSE_PastPapers_Opener/main/PastPaperOpener.bat)
 pause
 cls
@@ -81,46 +76,91 @@ goto :start
 :menu
 set /p Subject= Enter subject code: 
 if /I "%Subject%" == "update" goto :update
-if /I "%Subject%" == "download" set mode=Download & cls & goto :start
-if /I "%Subject%" == "view" set mode=View& cls & goto :start
-if /I "%Subject%" == "LIGHT" set clr=F0 & set theme=Light & goto :clr
-if /I "%Subject%" == "DARK" set clr=07 & set theme=Dark & goto :clr
+if /I "%Subject%" == "download" set mode=Download&cls& goto :start
+if /I "%Subject%" == "view" set mode=View&cls& goto :start
 if /I "%Subject%" == "help" start https://github.com/mrc2rules/IGCSE_PastPapers_Opener/wiki
-if /I "%Subject%" == "about" goto :about
-set /p Session=Enter letter(FM is m, MJ is s, ON is w): 
-set /p Year=Enter year of paper: 
-set /p Type=Is it ms or qp?: 
-set /p Paper=Enter variant: 
-echo.
-echo. The paper you have selected is %Subject%_%Session%%Year%_%Type%_%Paper%
-echo.
-if /I "%mode%" == "download" goto :download
+if /I "%Subject%" == "about" cls & goto :about
+:Year
+set /p "Year=Enter the year(last 2 dig.): "
+cmd /V /C echo/!Year!| > nul findstr "^[0-9][0-9]$" || goto :e1
+
+:Session
+choice /c msw /m "Session?(FM is m, MJ is s, ON is w) "
+if %errorlevel% == 1 set Session=m& goto :Type
+if %errorlevel% == 2 set Session=s& goto :Type
+if %errorlevel% == 3 set Session=q& goto :Type
+:Type
+set /p Type=Is it ms or qp?:
+if /I "%type%" == "ms" set type=ms& goto :Variant
+if /I "%type%" == "qp" set type=qp& goto :Variant
+mshta javascript:alert("Select either ms or qp only.");close(); & goto :Type
+:Variant
+set /p "Variant=Enter variant number: "
+cmd /V /C echo/!Variant!| > nul findstr "^[0-9][0-9]$" || goto :e2
+:ok
+cls
+echo/============================================================================================
+echo/
+echo/                      ^>^>^> The paper you have selected is %Subject%_%Session%%Year%_%Type%_%Variant% ^<^<^<
+echo/
+echo/============================================================================================
 :: Download or View
 :confirm
 SET /P sure=%mode% Paper? (y/n):
-IF /I "%sure%" == "y" goto :%mode%
-goto :N
+IF /I "%sure%" == "y" goto :webcheck
+cls
+goto :start
+:webcheck
+for /f %%i in ('curl -s -o /dev/null -w "%%{http_code}" https://dynamicpapers.com/wp-content/uploads/2015/09/%Subject%_%Session%%Year%_%Type%_%Variant%.pdf') do set RES=%%i
+echo/status code : %RES%
+if "%RES%" neq "200" (
+    goto :e3
+) else (
+    goto :%mode%
+)
 :download
-echo Downloading...(Downloads to the directory where this program is located)
-echo.
-curl https://dynamicpapers.com/wp-content/uploads/2015/09/%Subject%_%Session%%Year%_%Type%_%Paper%.pdf --output %Subject%_%Session%%Year%_%Type%_%Paper%.pdf
-echo.
-echo Downloaded! Going back to start
-timeout /t 3
+cls
+echo/============================================================================================
+echo/
+echo/                                      Downloading...
+echo/
+echo/                                                 
+echo/============================================================================================
+echo/
+curl https://dynamicpapers.com/wp-content/uploads/2015/09/%Subject%_%Session%%Year%_%Type%_%Variant%.pdf --output %Subject%_%Session%%Year%_%Type%_%Variant%.pdf --progress-bar
+echo/
+echo/============================================================================================
+echo/
+echo/                                       Download Complete!
+echo/                              File saved at %cd%
+echo/
+echo/============================================================================================
+timeout /t 10
 cls
 goto :start
 timeout
 :view
-echo Opening...
-start https://dynamicpapers.com/wp-content/uploads/2015/09/%Subject%_%Session%%Year%_%Type%_%Paper%.pdf
-cls
-goto :start
-:N
-echo ok dumbass, don't waste you time. do sums
-timeout /t 5
+echo/Opening...
+start https://dynamicpapers.com/wp-content/uploads/2015/09/%Subject%_%Session%%Year%_%Type%_%Variant%.pdf
 cls
 goto :start
 :clr
 color %clr%
+cls
+goto :start
+:: Error Dialogs
+:e1
+mshta javascript:alert("Please enter the last two digits of the year only.\n\n2013 means 13");close(); & goto :Year
+:e2
+mshta javascript:alert("Please enter two-digit variant number\nonly.");close(); & goto :Variant
+:e3
+cls
+echo/============================================================================================
+echo/
+echo/         ^>^>^> Selected paper %Subject%_%Session%%Year%_%Type%_%Variant%.pdf unavailable at dynamicpapers.com ^<^<^<
+echo/
+echo/                                                 Returning Home...
+echo/============================================================================================
+timeout /t 10
 cls
 goto :start
