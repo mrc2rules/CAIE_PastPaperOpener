@@ -3,12 +3,8 @@ title CAIE PastPaperOpener
 MODE CON:COLS=93 LINES=32
 :: Sets undefined variables
 set mode=View
-set vers=1.3
+set vers=1.31
 
-::Internet Check
-ping www.google.com -n 1 -w 1000 > nul
-cls
-if errorlevel 1 set int=NO INTERNET AVAILABLE!
 ::Updator
 for /F %%I in ('curl -sS https://raw.githubusercontent.com/mrc2rules/IGCSE_PastPapers_Opener/main/version.txt') do set up=%%I
 if "%up%" gtr "%vers%" set notif=Update Available!(v%up%)
@@ -47,7 +43,7 @@ echo/          saves you a few clicks from having to manually open the browser a
 echo/            
 echo/            
 echo/        
-echo/
+echo/                             Need help? Type "Help" for more info
 echo/
 echo/                                     
 echo/
@@ -80,23 +76,22 @@ if /I "%Subject%" == "download" set mode=Download&cls& goto :start
 if /I "%Subject%" == "view" set mode=View&cls& goto :start
 if /I "%Subject%" == "help" start https://github.com/mrc2rules/IGCSE_PastPapers_Opener/wiki
 if /I "%Subject%" == "about" cls & goto :about
-:Year
-set /p "Year=Enter the year(last 2 dig.): "
-cmd /V /C echo/!Year!| > nul findstr "^[0-9][0-9]$" || goto :e1
-
-:Session
-choice /c msw /m "Session?(FM is m, MJ is s, ON is w) "
-if %errorlevel% == 1 set Session=m& goto :Type
-if %errorlevel% == 2 set Session=s& goto :Type
-if %errorlevel% == 3 set Session=q& goto :Type
-:Type
-set /p Type=Is it ms or qp?:
-if /I "%type%" == "ms" set type=ms& goto :Variant
-if /I "%type%" == "qp" set type=qp& goto :Variant
-mshta javascript:alert("Select either ms or qp only.");close(); & goto :Type
 :Variant
 set /p "Variant=Enter variant number: "
 cmd /V /C echo/!Variant!| > nul findstr "^[0-9][0-9]$" || goto :e2
+:Session
+choice /c msw /m "Session?(FM is m, MJ is s, ON is w) "
+if %errorlevel% == 1 set Session=m& goto :Year
+if %errorlevel% == 2 set Session=s& goto :Year
+if %errorlevel% == 3 set Session=w& goto :Year
+:Year
+set /p "Year=Enter the year(last 2 dig.): "
+cmd /V /C echo/!Year!| > nul findstr "^[0-9][0-9]$" || goto :e1
+:Type
+set /p Type=Is it ms or qp?:
+if /I "%type%" == "ms" set type=ms& goto :ok
+if /I "%type%" == "qp" set type=qp& goto :ok
+mshta javascript:alert("Select either ms or qp only.");close(); & goto :Type
 :ok
 cls
 echo/============================================================================================
@@ -128,7 +123,7 @@ echo/
 echo/============================================================================================
 echo/
 curl https://dynamicpapers.com/wp-content/uploads/2015/09/%Subject%_%Session%%Year%_%Type%_%Variant%.pdf --output %Subject%_%Session%%Year%_%Type%_%Variant%.pdf --progress-bar
-echo/
+cls
 echo/============================================================================================
 echo/
 echo/                                       Download Complete!
@@ -164,3 +159,5 @@ echo/===========================================================================
 timeout /t 10
 cls
 goto :start
+:e4
+mshta javascript:alert("You are not connected to the Internet");close(); & exit
