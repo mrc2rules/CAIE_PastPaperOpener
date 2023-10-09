@@ -5,13 +5,20 @@
 
 ![](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
-A fast, easy to use application to view/download past papers. Just enter the paper code and that's it! Works on all Windows platforms.
-It's under 7KB! This program relies on Dynamic Papers website.
+A fast, easy to use application to view/download past papers. Just enter the paper code and that's it! Opens **both the ms and qp together!** 
+Works on all Windows platforms. It's under 6KB!
+
+This program relies on the Dynamic Papers website.
 
 Since this is a ".bat" file, your browser and Windows will automatically show a warning. You can safely ignore it.
 
 Download => https://github.com/mrc2rules/IGCSE_PastPapers_Opener/releases/
 
 ## Screenshots
-![image](https://user-images.githubusercontent.com/58372697/195889322-56ffe344-a946-4a40-9a03-d0eb25ee2c0f.png)
+![image](https://github.com/mrc2rules/CAIE_PastPapersOpener/assets/58372697/3b5d3ac9-4216-4f46-95e3-3a4daaaf2ff7)
+
+#Demo GIF
+![ezgif-1-ef29458192](https://github.com/mrc2rules/CAIE_PastPapersOpener/assets/58372697/bc7caa89-30e1-4c86-926b-8941be140b94)
+
+
 
