@@ -1,6 +1,6 @@
 @echo off
 title CAIE PastPaperOpener 
-MODE CON:COLS=95 LINES=32
+MODE CON:COLS=96 LINES=32
 
 :: Sets undefined variables
 set mode=View
@@ -18,7 +18,7 @@ if "%up%" gtr "%vers%" set notif=Update Available!(v%up%)
 :: Home Page
 :start
 cls
-echo/===============================================================================================
+echo/================================================================================================
 echo/ %int%
 echo/                Welcome!                                 Made with ^<3 by Rahbab!
 echo/
@@ -70,7 +70,7 @@ cmd /V /C echo/!Variant!| > nul findstr "^[0-9][0-9]$" || goto :e2
 for /f %%i in ('curl -s -o /dev/null -w "%%{http_code}" https://dynamicpapers.com/wp-content/uploads/2015/09/%Subject%_%Session%%Year%_qp_%Variant%.pdf') do set RES=%%i
 echo/status code : %RES%
 if "%RES%" neq "200" (
-    goto :e3
+    goto :e4
 ) else (
     goto :%mode%
 )
