@@ -2,7 +2,7 @@
 title CAIE PastPaperOpener 
 MODE CON:COLS=95 LINES=32
 
-:: Sets Undefined Variables
+:: Sets undefined variables
 set mode=View
 set vers=1.4
 
@@ -11,7 +11,7 @@ ping www.google.com -n 1 -w 1000 > nul
 cls
 if errorlevel 1 goto :e3
 
-::Checks For New Updates
+::Updator
 for /F %%I in ('curl -sS https://raw.githubusercontent.com/mrc2rules/IGCSE_PastPapers_Opener/main/version.txt') do set up=%%I
 if "%up%" gtr "%vers%" set notif=Update Available!(v%up%)
 
@@ -20,8 +20,8 @@ if "%up%" gtr "%vers%" set notif=Update Available!(v%up%)
 cls
 echo/===============================================================================================
 echo/ %int%
-echo/             Welcome!                                    Made with ^<3 by Rahbab!
-echo/                                   
+echo/                Welcome!                                 Made with ^<3 by Rahbab!
+echo/
 :::
 :::  ________   ________  ___          __    ___                      ____                       
 ::: / ___/ _ | /  _/ __/ / _ \___ ____/ /_  / _ \___ ____  ___ ____  / __ \___  ___ ___  ___ ____
@@ -30,7 +30,7 @@ echo/
 :::                                                /_/                  /_/                      
 :::
 for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
-echo/                          
+echo/
 echo/
 echo/                                     ^>^>^>  Options ^<^<^<
 echo/
@@ -38,12 +38,12 @@ echo/                         [Mode: Download^|View] Papers will be %mode%ed
 echo/
 echo/
 echo/[Version %vers%]                                           [Having problems? Type "Help"] [About]
-echo/===============================================================================================
+echo/================================================================================================
 echo/
 
-:: Menu Options For The User
+:: Menu Options for the User
 :menu
-set /p Subject= Enter subject code: 
+set /p Subject= Enter Subject Code: 
 if /I "%Subject%" == "update" goto :update
 if /I "%Subject%" == "download" set mode=Download& goto :start
 if /I "%Subject%" == "view" set mode=View& goto :start
@@ -52,17 +52,17 @@ if /I "%Subject%" == "about" cls & goto :about
 
 :: User Input Options
 :Year
-set /p "Year=Enter the year(last 2 dig.): "
+set /p "Year=Enter The Year(last 2 dig.): "
 cmd /V /C echo/!Year!| > nul findstr "^[0-9][0-9]$" || goto :e1
 
 :Session
-choice /c msw /m "Session?(FM is m, MJ is s, ON is w) "
+choice /c msw /m "Session? (FebMar= M, MayJune= S, OctNov= W) "
 if %errorlevel% == 1 set Session=m& goto :Variant
 if %errorlevel% == 2 set Session=s& goto :Variant
 if %errorlevel% == 3 set Session=w& goto :Variant
 
 :Variant
-set /p "Variant=Enter variant number: "
+set /p "Variant=Enter Variant Number: "
 cmd /V /C echo/!Variant!| > nul findstr "^[0-9][0-9]$" || goto :e2
 
 :: Paper Validity Checks And Mode 
@@ -77,22 +77,24 @@ if "%RES%" neq "200" (
 
 :download
 cls
-echo/============================================================================================
+echo/================================================================================================
+echo/
 echo/
 echo/                                      Downloading...
 echo/
-echo/                                                 
-echo/============================================================================================
+echo/
+echo/================================================================================================
 echo/
 curl https://dynamicpapers.com/wp-content/uploads/2015/09/%Subject%_%Session%%Year%_qp_%Variant%.pdf --output %Subject%_%Session%%Year%_%Type%_%Variant%.pdf --progress-bar
 curl https://dynamicpapers.com/wp-content/uploads/2015/09/%Subject%_%Session%%Year%_ms_%Variant%.pdf --output %Subject%_%Session%%Year%_%Type%_%Variant%.pdf --progress-bar
 echo/
-echo/============================================================================================
+echo/================================================================================================
+echo/
 echo/
 echo/                                       Download Complete!
 echo/                              Papers saved at %cd%
 echo/
-echo/============================================================================================
+echo/================================================================================================
 timeout /t 10
 goto :start
 timeout
@@ -105,11 +107,13 @@ cls
 
 :notice
 cls
-echo/============================================================================================
+echo/================================================================================================
+echo/
 echo/
 echo/                      ^>^>^> Opened selected paper %Subject%_%Session%%Year%_[qp+ms]_%Variant% ^<^<^<
 echo/
-echo/============================================================================================
+echo/
+echo/================================================================================================
 timeout /t 10
 goto :start
 
@@ -122,24 +126,27 @@ mshta javascript:alert("Please enter two-digit variant number\nonly.");close(); 
 mshta javascript:alert("You are not connected to the internet");close(); & exit
 :e4
 cls
-echo/============================================================================================
+echo/================================================================================================
 echo/
-echo/         ^>^>^> Selected paper %Subject%_%Session%%Year%_%Type%_%Variant%.pdf unavailable at dynamicpapers.com ^<^<^<
+echo/
+echo/         ^>^>^> Selected paper %Subject%_%Session%%Year%_[qp+ms]_%Variant%.pdf unavailable at dynamicpapers.com ^<^<^<
 echo/
 echo/                                                 Returning Home...
-echo/============================================================================================
-timeout /t 10
+echo/================================================================================================
+timeout /t 15
 goto :start
 
 :: Program Updator
 :update
 cls
-echo/============================================================================================
+echo/================================================================================================
+echo/
 echo/
 echo/                         ^>^>^> Updating....Please Wait ^<^<^<
 echo/
-echo/============================================================================================
 echo/
-(cd && curl -O https://raw.githubusercontent.com/mrc2rules/IGCSE_PastPapers_Opener/main/PastPaperOpener.bat)
+echo/================================================================================================
+echo/
+(cd && curl -O https://raw.githubusercontent.com/mrc2rules/CAIE_PastPapersOpener/main/CAIE%20PastPaperOpener.bat)
 pause
 goto :start
