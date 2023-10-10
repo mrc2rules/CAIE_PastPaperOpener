@@ -147,6 +147,6 @@ echo/
 echo/
 echo/================================================================================================
 echo/
-(cd && curl -O https://raw.githubusercontent.com/mrc2rules/CAIE_PastPapersOpener/main/CAIE%20PastPaperOpener.bat)
+(cd && curl -O https://raw.githubusercontent.com/mrc2rules/CAIE_PastPapersOpener/main/CAIE_PastPaperOpener.bat)
 pause
 goto :start
