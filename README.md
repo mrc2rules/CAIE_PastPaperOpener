@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-  <h3 align="center">CAIE PastPapersOpener</h3>
+  <h3 align="center">CAIE PastPapersOpener</h2>
 
   <p align="center">
     An simple cmd tool to make opening papers a little bit easier :)
