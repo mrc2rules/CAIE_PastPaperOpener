@@ -5,7 +5,7 @@
 
 ![](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
-A fast, easy to use application to view/download past papers. Just enter the paper code and that's it! Opens **both the ms and qp together!** 
+A simple application to open both ms & qp papers together quickly!. Just enter the paper code and that's it! You can choose to either download or view the papers.
 Works on all Windows platforms. It's under 6KB!
 
 This program relies on the Dynamic Papers website.
