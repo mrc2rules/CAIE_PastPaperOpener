@@ -15,16 +15,15 @@
 ![](https://img.shields.io/github/downloads/mrc2rules/IGCSE_PastPapers_Opener/total.svg?style=for-the-badge&color=F62451) ![](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
 ## About
-A simple application to open both ms & qp past papers together quickly! No more manually googling them everytime!
-You just enter the paper code once and that's it! The app is also able to download the papers if you wish to do so.
+A simple application to open **both** ms & qp past papers together quickly! **No more manually googling them everytime!** Just enter the paper code once and that's it! 
+
+The app is also able to _download_ the papers if you wish to do so. This program relies on the **<a href="https://dynamicpapers.com/"><strong>Dynamic Papers</strong></a>** website.
 
 Works on all Windows platforms. It's under 6KB!
 
-This program relies on the Dynamic Papers website.
+Since this is a ".bat" file, your browser and Windows _will automatically show a warning_. You can safely ignore it.
 
-Since this is a ".bat" file, your browser and Windows will automatically show a warning. You can safely ignore it.
-
-Download => https://github.com/mrc2rules/IGCSE_PastPapers_Opener/releases/
+**Download Here »»** https://github.com/mrc2rules/IGCSE_PastPapers_Opener/releases/
 
 ## Screenshots
 ![image](https://github.com/mrc2rules/CAIE_PastPapersOpener/assets/58372697/3b5d3ac9-4216-4f46-95e3-3a4daaaf2ff7)
