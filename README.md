@@ -19,28 +19,26 @@ A simple application to open **both** ms & qp past papers together quickly! **No
 
 The app is also able to _download_ the papers if you wish to do so. This program relies on the [Dynamic Papers](https://dynamicpapers.com/) website.
 
-Works on all Windows platforms. It's under 6KB!
+**Download Here »»** https://github.com/mrc2rules/CAIE_PastPapersOpener/releases/latest
 
-> [!NOTE]
-> Since this is a ".bat" file, your browser and Windows _will automatically show a warning_. You can safely ignore it.
-
-**Download Here »»** https://github.com/mrc2rules/IGCSE_PastPapers_Opener/releases/
-
-## Screenshots
-![image](https://github.com/mrc2rules/CAIE_PastPapersOpener/assets/58372697/3b5d3ac9-4216-4f46-95e3-3a4daaaf2ff7)
-
-## Usage/Examples
+## Usage Example
 ![ezgif-1-ef29458192](https://github.com/mrc2rules/CAIE_PastPapersOpener/assets/58372697/bc7caa89-30e1-4c86-926b-8941be140b94)
 
 ## Installation
+> [!IMPORTANT]
+> Apps with `.bat` format, such as this app, trigger a warning from both your browser and Windows, regardless of whether they are harmful or not.
+> 
+> You can safely ignore it.
+### Steps
 1. **<a href="https://github.com/mrc2rules/IGCSE_PastPapers_Opener/releases/"><strong>Download the App »</strong></a>**
-2. Select Keep
+2. Select **Keep**
 
     ![image](https://github.com/mrc2rules/CAIE_PastPapersOpener/assets/58372697/ddbb1ba6-d5b3-4b7d-a05b-14655fd3bb63)
-4. Select Keep Anyway
+4. Select **Keep Anyway**
  
    ![image](https://github.com/mrc2rules/CAIE_PastPapersOpener/assets/58372697/2e980d0b-4407-4cb7-acda-f1026e83910e)
+5. After you open the file, you might get these popups. Select **Run Anyway**
+
+   ![image](https://github.com/mrc2rules/CAIE_PastPapersOpener/assets/58372697/424a2c17-8c0d-46c0-bbcb-c701da5e9eea)
 6. That's it!
-
-
 
