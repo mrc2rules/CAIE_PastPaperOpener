@@ -29,7 +29,7 @@ The program relies on the [Dynamic Papers](https://dynamicpapers.com/) website.
 - Checks if the paper is available before opening/downloading them
 
 ## Usage Example
-![ezgif-1-ef29458192](https://github.com/mrc2rules/CAIE_PastPapersOpener/assets/58372697/bc7caa89-30e1-4c86-926b-8941be140b94)
+![USAGE](https://github.com/mrc2rules/CAIE_PastPapersOpener/assets/58372697/ecb881fd-2b5b-47f3-bb28-e64cf1d75e2a)
 
 ## Installation
 > [!IMPORTANT]
@@ -49,3 +49,5 @@ The program relies on the [Dynamic Papers](https://dynamicpapers.com/) website.
    ![image](https://github.com/mrc2rules/CAIE_PastPapersOpener/assets/58372697/424a2c17-8c0d-46c0-bbcb-c701da5e9eea)
 6. That's it!
 
+## License
+mrc2rules/CAIE_PastPapersOpener is licensed under the **MIT License**. A copy of the license can be found in the [**LICENSE**](https://github.com/mrc2rules/CAIE_PastPapersOpener/blob/main/LICENSE) file.
