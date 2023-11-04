@@ -8,25 +8,31 @@
     <a href="https://github.com/mrc2rules/CAIE_PastPapersOpener/wiki"><strong>Need Help? »</strong></a>
     <br/>
     <br/> 
+    <img src="https://img.shields.io/github/downloads/mrc2rules/IGCSE_PastPapers_Opener/total.svg?style=for-the-badge&color=F62451" alt="Downloads" >
+    <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows" >
 
   </p>
 </p>
         
-![](https://img.shields.io/github/downloads/mrc2rules/IGCSE_PastPapers_Opener/total.svg?style=for-the-badge&color=F62451) ![](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-
 ## About
-A simple app that lets you access **both** mark scheme & question papers together in one go! **You don't need to waste time manually Googling each of them anymore!**
+A simple app that lets you access **both** mark scheme & question papers together in one go! **You don't need to waste time manually googling each of them anymore!**
 
 Whether you want to view or download the papers, all you need to do is enter the paper code!
 
 The program relies on the [Dynamic Papers](https://dynamicpapers.com/) website.
 
-[**Click to Download »»**](https://github.com/mrc2rules/CAIE_PastPapersOpener/releases/latest)
+[**Click here to download »»**](https://github.com/mrc2rules/CAIE_PastPapersOpener/releases/latest)
 
-### Features
+## Features
 - Has a _Preview_ mode than opens both papers in your browser
 - Has a _Download_ mode where it downloads both papers in organized folders according to the paper code
 - Checks if the paper is available before opening/downloading them
+
+### Upcoming
+- [x] Create organized folders based on the paper code and save papers there.
+- [x] Go back to the previous prompt if you mistyped the code.
+- [ ] Configurable settings to toggle confirmation popup and default mode at startup
+- [ ] Ability to download different types of resources other than just papers
 
 The changelogs can be [**found here »»**](https://github.com/mrc2rules/CAIE_PastPapersOpener/blob/main/CHANGELOG.md)
 
