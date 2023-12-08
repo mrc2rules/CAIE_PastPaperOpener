@@ -2,7 +2,7 @@
 <p align="center">
   <h1 align="center">CAIE PastPapersOpener </h1>
   <p align="center">
-    An useful cmd tool to make opening(and downloading!) your papers a little bit easier :)
+    An useful tool to make opening (and downloading!) your papers easier and quicker! :)
     <br/>
     <br/>
     <a href="https://github.com/mrc2rules/CAIE_PastPapersOpener/wiki"><strong>Need Help? »</strong></a>
@@ -15,7 +15,7 @@
 </p>
         
 ## About
-A simple app that lets you access **both** mark scheme & question papers together in one go! **You don't need to waste time manually googling each of them anymore!**
+CAIE PastPaperOpener lets you access **both** mark scheme & question papers together in one go! **You don't need to waste time googling each of them anymore!**
 
 Whether you want to view or download the papers, all you need to do is enter the paper code!
 
@@ -26,12 +26,10 @@ The program relies on the [Dynamic Papers](https://dynamicpapers.com/) website.
 ## Features
 - Has a _Preview_ mode than opens both papers in your browser
 - Has a _Download_ mode where it downloads both papers in organized folders according to the paper code
-- Checks if the paper is available before opening/downloading them
+- Customize confirmation popup and default mode settings
+- Verify paper availability before opening/downloading
 
 ### Upcoming
-- [x] Create organized folders based on the paper code and save papers there.
-- [x] Go back to the previous prompt if you mistyped the code.
-- [ ] Configurable settings to toggle confirmation popup and default mode at startup
 - [ ] Ability to download different types of resources other than just papers
 
 The changelogs can be [**found here »»**](https://github.com/mrc2rules/CAIE_PastPapersOpener/blob/main/CHANGELOG.md)
@@ -41,7 +39,7 @@ The changelogs can be [**found here »»**](https://github.com/mrc2rules/CAIE_Pa
 
 ## Installation
 > [!IMPORTANT]
-> Apps with `.bat` format, like this app, trigger a warning from your browser and Windows, regardless of whether they are harmful or not.
+> Apps with `.bat` file format like this app, trigger a warning from Windows and your browser, regardless of whether they are harmful or not.
 > 
 > You can safely ignore it.
 ### Steps
