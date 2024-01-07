@@ -8,12 +8,14 @@
     <a href="https://github.com/mrc2rules/CAIE_PastPapersOpener/wiki"><strong>Need Help? »</strong></a>
     <br/>
     <br/> 
-    <img src="https://img.shields.io/github/downloads/mrc2rules/IGCSE_PastPapers_Opener/total.svg?style=for-the-badge&color=F62451" alt="Downloads" >
     <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows" >
+    <img src="https://img.shields.io/github/downloads/mrc2rules/CAIE_PastPapersOpener/total?style=for-the-badge&color=F62451" >
+    <img src="https://img.shields.io/discord/1193530843151470592?style=for-the-badge&logo=discord&logoColor=7289da&label=Join%20Discord&color=7289da" >
+
 
   </p>
 </p>
-        
+
 ## About
 CAIE PastPaperOpener lets you access **both** mark scheme & question papers together in one go! **You don't need to waste time googling each of them anymore!**
 
