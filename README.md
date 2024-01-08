@@ -1,7 +1,9 @@
-<br/>
-<p align="center">
-  <h1 align="center">CAIE PastPapersOpener </h1>
-  <p align="center">
+<div align="center"> 
+  <img src="https://github.com/mrc2rules/CAIE_PastPaperOpener/assets/58372697/e3e5ba40-013f-4db8-83a3-b16da9a341b9" alt="logo" width="160">
+</div>
+<div align="center">
+  <h1>CAIE PastPapersOpener </h1>
+  <p>
     An useful tool to make opening (and downloading!) your papers easier and quicker! :)
     <br/>
     <br/>
@@ -11,28 +13,35 @@
     <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows" >
     <img src="https://img.shields.io/github/downloads/mrc2rules/CAIE_PastPapersOpener/total?style=for-the-badge&color=F62451" >
     <a href="https://discord.gg/gFDdvS4yjJ">
-<img src="https://img.shields.io/discord/1193530843151470592?style=for-the-badge&logo=discord&logoColor=7289da&label=Join%20Discord&color=7289da" >
+      <img src="https://img.shields.io/discord/1193530843151470592?style=for-the-badge&logo=discord&logoColor=7289da&label=Join%20Discord&color=7289da" >
     </a>
   </p>
-</p>
+</div>
 
 ## About
-CAIE PastPaperOpener lets you access **both** mark scheme & question papers together in one go! **You don't need to waste time googling each of them anymore!**
+CAIE PastPaperOpener lets you access **both** mark scheme & question papers (even search it on YouTube!) all together in one go! **You don't need to waste time googling each of them anymore!**
 
-Whether you want to view or download the papers, all you need to do is enter the paper code!
+Whether you want to view or download the papers, all you need to do is enter the paper code _once_!
 
 The program relies on the [Dynamic Papers](https://dynamicpapers.com/) website.
 
 [**Click here to download »»**](https://github.com/mrc2rules/CAIE_PastPapersOpener/releases/latest)
 
 ## Features
-- Has a _Preview_ mode than opens both papers in your browser
-- Has a _Download_ mode where it downloads both papers in organized folders according to the paper code
+- _Preview_ mode, opens both papers in your browser
+- _Download_ mode, downloads both papers in organized folders according to the paper code
+- Ability to also search it on YouTube
 - Customize confirmation popup and default mode settings
 - Verify paper availability before opening/downloading
 
-### Upcoming
+**Extras:-**
+- You can set a custom wallpaper
+- You can change the logo from 3 options
+
+### Planned Features
 - [ ] Ability to download different types of resources other than just papers
+- [ ] Currently this is keyboard only, might add mouse support idk
+- [ ] Ability to download papers to a _selected_ directory
 
 The changelogs can be [**found here »»**](https://github.com/mrc2rules/CAIE_PastPapersOpener/blob/main/CHANGELOG.md)
 
