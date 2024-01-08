@@ -12,7 +12,7 @@
     <br/> 
     <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows" >
     <img src="https://img.shields.io/github/downloads/mrc2rules/CAIE_PastPapersOpener/total?style=for-the-badge&color=F62451" >
-    <a href="https://discord.gg/gFDdvS4yjJ">
+    <a href="https://discord.gg/Sb6QRYDxKG">
       <img src="https://img.shields.io/discord/1193530843151470592?style=for-the-badge&logo=discord&logoColor=7289da&label=Join%20Discord&color=7289da" >
     </a>
   </p>
