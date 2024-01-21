@@ -1,10 +1,10 @@
 <div align="center"> 
-  <img src="https://github.com/mrc2rules/CAIE_PastPaperOpener/assets/58372697/e3e5ba40-013f-4db8-83a3-b16da9a341b9" alt="logo" width="160">
+  <img src="https://github.com/mrc2rules/CAIE_PastPaperOpener/assets/58372697/388bb400-5a58-4242-8f37-8410bde750e5" alt="logo" width="160">
 </div>
 <div align="center">
   <h1>CAIE PastPapersOpener </h1>
   <p>
-    An useful tool to make opening (and downloading!) your papers easier and quicker! :)
+    A comprehensive tool that lets you access multiple CAIE exam papers quickly and efficiently :)
     <br/>
     <br/>
     <a href="https://github.com/mrc2rules/CAIE_PastPapersOpener/wiki"><strong>Need Help? »</strong></a>
@@ -19,7 +19,7 @@
 </div>
 
 ## About
-CAIE PastPaperOpener lets you access **both** mark scheme & question papers (even search it on YouTube!) all together in one go! **You don't need to waste time googling each of them anymore!**
+CAIE PastPaperOpener lets you access qp, ms, gt or er (even search it on YouTube!) all together in one go! It _maximises your efficiency_ and saves time by eliminating the need to google each paper seperately!
 
 Whether you want to view or download the papers, all you need to do is enter the paper code _once_!
 
@@ -28,10 +28,11 @@ The program relies on the [Dynamic Papers](https://dynamicpapers.com/) website.
 [**Click here to download »»**](https://github.com/mrc2rules/CAIE_PastPapersOpener/releases/latest)
 
 ## Features
+- Toggable options to open multiple types of paper together
 - _Preview_ mode, opens both papers in your browser
 - _Download_ mode, downloads both papers in organized folders according to the paper code
 - Ability to also search it on YouTube
-- Customize confirmation popup and default mode settings
+- Toggle confirmation popup and default mode settings
 - Verify paper availability before opening/downloading
 
 **Extras:-**
@@ -42,15 +43,18 @@ The program relies on the [Dynamic Papers](https://dynamicpapers.com/) website.
 - [ ] Ability to download different types of resources other than just papers
 - [ ] Currently this is keyboard only, might add mouse support idk
 - [ ] Ability to download papers to a _selected_ directory
+- [ ] Ability to search for questions
 
 The changelogs can be [**found here »»**](https://github.com/mrc2rules/CAIE_PastPapersOpener/blob/main/CHANGELOG.md)
 
-## Usage Example
-![USAGE](https://github.com/mrc2rules/CAIE_PastPapersOpener/assets/58372697/ecb881fd-2b5b-47f3-bb28-e64cf1d75e2a)
+## Screenshots
+![image](https://github.com/mrc2rules/CAIE_PastPaperOpener/assets/58372697/eac7ec1a-4a9a-44b3-a466-89a07b557cdf)
+![image](https://github.com/mrc2rules/CAIE_PastPaperOpener/assets/58372697/20f237e2-ee4b-4c65-a11c-c59ce28b27c3)
+
 
 ## Installation
 > [!IMPORTANT]
-> Apps with `.bat` file format like this app, trigger a warning from Windows and your browser, regardless of whether they are harmful or not.
+> Apps with `.exe` file format like this app, trigger a warning from Windows and your browser, regardless of whether they are harmful or not.
 > 
 > You can safely ignore it.
 ### Steps
