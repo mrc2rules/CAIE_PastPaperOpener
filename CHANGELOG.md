@@ -1,19 +1,20 @@
-# [Version 1.5 - 2/11/2013]
+# [Version 1.5 - 21/01/2024]
 ## Whats New?
-- 📂 After downloading a paper, the app opens the folder of the PDF where it is saved and highlights it
-- 📂 The app creates organized folders based on the paper code and saves them there.
-- ❓ Added an about menu with information about the app
-- 📶 Made the Update tool more robust;
-              - It checks if you are on the latest version and will notify you if there's an update available
-- ↩️ You can go back to the previous step if you make a mistake entering the paper code
-- 🌈 Improved UI with colored text menus and highlighted text for increased readability
-- 👀 Easter Egg
+📄 Support for Grade Thresholds and Examiner Report 
+📄 Toggable paper types (qp,ms,gt,er). You can switch off papers you don't want to open
+▶️ Option to search paper on youtube alongside opening the papers simultaneously
 
-## What's Changed?
-- 📄 Changed the format of paper code input to match the code at the bottom of the paper, [e.g: 0580/41/M/J/18]
-- 🔗 Updated the old links (Update, Wiki) 
-      
-## Bug Fixes
-- 🔔 No notification when a new update is detected
-- ❓ Menu texts not centered
-- ⬇️ Download Feature Broken
+↩️ You can go back to the previous step if you make a mistake entering the paper code [By typing B]
+📄 You now enter the paper code as shown on the QP, [e.g: 0580/41/M/J/18]
+
+📂 After downloading a paper, the app opens the folder of the PDF where it is saved.
+📂 The app creates organized folders based on the paper code and saves them there.
+
+🌈 Massively overhauled UI (now coloured!)
+🖼️ Ability to set a custom background!
+
+💻 The program is now released as an installer file
+🏠 Changing home page logo
+
+❓ Added About menu
+📶 Brand new, seperate mechanism to update the app
