@@ -11,6 +11,7 @@ set tRED=[38;5;167m
 set tGRN=[38;5;29m
 set tYLW=[38;5;228m
 set tORG=[38;5;215m
+set tgray=[38;5;248m
 set int=[1m
 set und=[4m
 set it=[3m
@@ -18,6 +19,7 @@ set THL=[38;5;159m
 ::Background Formatting
 ::Highlight, Gray, Dark Red, Dark Green
 set HL=[48;5;234m
+set HL1=[48;5;236m
 set gray=[48;5;240m  
 set dRED=[48;5;88m
 set dgrn=[48;5;29m
