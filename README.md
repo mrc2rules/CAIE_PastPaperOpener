@@ -21,7 +21,7 @@
 ## About
 CAIE PastPaperOpener lets you access qp, ms, gt or er (even search it on YouTube!) all together in one go! It _maximises your efficiency_ and saves time by eliminating the need to google each paper seperately!
 
-Whether you want to view or download the papers, all you need to do is enter the paper code _once_!
+Whether you want to view or download the papers, all you need to do is enter the paper code _once_! Scroll down for usage examples
 
 The program relies on the [Dynamic Papers](https://dynamicpapers.com/) website.
 
@@ -48,8 +48,12 @@ The program relies on the [Dynamic Papers](https://dynamicpapers.com/) website.
 The changelogs can be [**found here »»**](https://github.com/mrc2rules/CAIE_PastPapersOpener/blob/main/CHANGELOG.md)
 
 ## Screenshots
-![image](https://github.com/mrc2rules/CAIE_PastPaperOpener/assets/58372697/eac7ec1a-4a9a-44b3-a466-89a07b557cdf)
-![image](https://github.com/mrc2rules/CAIE_PastPaperOpener/assets/58372697/20f237e2-ee4b-4c65-a11c-c59ce28b27c3)
+<img src="https://github.com/mrc2rules/CAIE_PastPaperOpener/assets/58372697/eac7ec1a-4a9a-44b3-a466-89a07b557cdf" width="500">
+<img src="https://github.com/mrc2rules/CAIE_PastPaperOpener/assets/58372697/20f237e2-ee4b-4c65-a11c-c59ce28b27c3" width="500">
+
+## Usage
+![usage](https://github.com/mrc2rules/CAIE_PastPaperOpener/assets/58372697/ad46f151-ddeb-44fb-8feb-267b25207fd0)
+
 
 
 ## Installation
