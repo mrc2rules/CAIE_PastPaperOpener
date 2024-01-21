@@ -37,4 +37,5 @@ curl -sSO https://raw.githubusercontent.com/mrc2rules/CAIE_PastPaperOpener/main/
 del config.txt
 call msgbox "Update Successful!\n\nNote: Settings have been reset"  "0+64" "Information"
 start /min "" "Run.bat"
+start /b "" cmd /c del "%~f0"
 exit
