@@ -28,28 +28,29 @@ The program relies on the [Dynamic Papers](https://dynamicpapers.com/) website.
 [**Click here to download »»**](https://github.com/mrc2rules/CAIE_PastPapersOpener/releases/latest)
 
 ## Features
-- Toggable options to open multiple types of paper together
-- _Preview_ mode, opens both papers in your browser
-- _Download_ mode, downloads both papers in organized folders according to the paper code
-- Ability to also search it on YouTube
-- Toggle confirmation popup and default mode settings
-- Verify paper availability before opening/downloading
-
+- 📄 _Preview_ mode, opens both papers in your browser
+- 💾 _Download_ mode, downloads both papers in organized folders according to the paper code
+- ⚙️ Toggable settings to enable/disable paper types to open (qp/ms/gt/er)
+- 🔴 Search paper on YouTube
+- 🎚️ Toggle confirmation popup and default mode settings
+  
 **Extras:-**
-- You can set a custom wallpaper
-- You can change the logo from 3 options
+- 🖼️ Set a custom wallpaper
+- 🍏 Change the logo from 3 options
 
 ### Planned Features
-- [ ] Ability to download different types of resources other than just papers
-- [ ] Currently this is keyboard only, might add mouse support idk
-- [ ] Ability to download papers to a _selected_ directory
-- [ ] Ability to search for questions
+- [ ] 💾 Ability to download different types of resources other than just papers
+- [ ] 📂 Ability to download papers to a _selected_ directory
+- [ ] 🔎 Ability to search for questions
 
 The changelogs can be [**found here »»**](https://github.com/mrc2rules/CAIE_PastPapersOpener/blob/main/CHANGELOG.md)
 
 ## Screenshots
-<img src="https://github.com/mrc2rules/CAIE_PastPaperOpener/assets/58372697/eac7ec1a-4a9a-44b3-a466-89a07b557cdf" width="500">
-<img src="https://github.com/mrc2rules/CAIE_PastPaperOpener/assets/58372697/20f237e2-ee4b-4c65-a11c-c59ce28b27c3" width="500">
+
+<p float="center">
+  <img src="https://github.com/mrc2rules/CAIE_PastPaperOpener/assets/58372697/eac7ec1a-4a9a-44b3-a466-89a07b557cdf" width="500" />
+  <img src="https://github.com/mrc2rules/CAIE_PastPaperOpener/assets/58372697/20f237e2-ee4b-4c65-a11c-c59ce28b27c3" width="500" /> 
+</p>
 
 ## Usage
 ![usage](https://github.com/mrc2rules/CAIE_PastPaperOpener/assets/58372697/ad46f151-ddeb-44fb-8feb-267b25207fd0)
@@ -58,7 +59,7 @@ The changelogs can be [**found here »»**](https://github.com/mrc2rules/CAIE_Pa
 
 ## Installation
 > [!IMPORTANT]
-> Apps with `.exe` file format like this app, trigger a warning from Windows and your browser, regardless of whether they are harmful or not.
+> Apps with `.exe` file format like this app, trigger a warning from Windows and your browser, whether they are harmful or not. This means actual harmless apps get blocked unfortunately.
 > 
 > You can safely ignore it.
 ### Steps
@@ -69,7 +70,7 @@ The changelogs can be [**found here »»**](https://github.com/mrc2rules/CAIE_Pa
 4. Select **Keep Anyway**
  
    ![image](https://github.com/mrc2rules/CAIE_PastPapersOpener/assets/58372697/2e980d0b-4407-4cb7-acda-f1026e83910e)
-5. After you open the file, you might get these popups. Select **Run Anyway**
+5. After you open the file, select **More Info > Run Anyway**
 
    ![image](https://github.com/mrc2rules/CAIE_PastPapersOpener/assets/58372697/424a2c17-8c0d-46c0-bbcb-c701da5e9eea)
 6. That's it!
