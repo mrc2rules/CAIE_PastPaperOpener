@@ -48,8 +48,8 @@ The changelogs can be [**found here »»**](https://github.com/mrc2rules/CAIE_Pa
 ## Screenshots
 
 <p float="center">
-  <img src="https://github.com/mrc2rules/CAIE_PastPaperOpener/assets/58372697/eac7ec1a-4a9a-44b3-a466-89a07b557cdf" width="500" />
-  <img src="https://github.com/mrc2rules/CAIE_PastPaperOpener/assets/58372697/20f237e2-ee4b-4c65-a11c-c59ce28b27c3" width="500" /> 
+  <img src="https://github.com/mrc2rules/CAIE_PastPaperOpener/assets/58372697/eac7ec1a-4a9a-44b3-a466-89a07b557cdf" width="400" />
+  <img src="https://github.com/mrc2rules/CAIE_PastPaperOpener/assets/58372697/20f237e2-ee4b-4c65-a11c-c59ce28b27c3" width="400" /> 
 </p>
 
 ## Usage
