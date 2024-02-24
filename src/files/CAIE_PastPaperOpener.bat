@@ -67,7 +67,7 @@ echo.  ╰───────────────────────�
 :menu
 :Subject
 <nul set /p "=‎‎│‎|%tYLW%1%rst%|  Type %THL%Subject Code%RST%                               >> "
-choice /N /c 0123456789UDPHASY
+choice /N /c 0123456789UDPHASYQ
 SET /A Subject1=%ERRORLEVEL%-1
 if %errorlevel% == 11 goto :update
 if %errorlevel% == 12 set mode=DOWNLOAD& goto :home
@@ -159,7 +159,7 @@ echo.             │                                     %tgray%│%THL%       
 echo.             │ %THL%3 ^>%rst% Logo                - %color3% %tgray%│%THL%                                   %tYLW%│
 echo.             │                                                                         │
 echo.             │                                                                         │
-echo.             ╰─────────────────────────────────────────────────────────── %THL%Version %version% %tYLW%─╯
+echo.             ╰───────────────────────────────────────────────────────── %THL%Version %version% %tYLW%─╯
 echo.
 echo.                       %color4%┌────────────────%hl%%tred%┃  Toggle Paper Type  ┃%rst%%color7%────────────────┐%rst%
 echo.                       %color4%│           %color5%┌─────────┘        %color6%│                        %color7%│
@@ -268,7 +268,7 @@ cls
 echo.#4%HL%it is version one point five impossible is nothing%rst%
 echo.%gray%                                                                                                  %rst%
 %image% %logo%
-echo.   %tRED%^>^>^>%rst%  A simple application to open %THL%both mark scheme and question papers%rst% together quickly^^!^^!  %tRED%^<^<^<%rst%
+echo. %tRED%^>^>%rst% A comprehensive tool that lets you access %thl%multiple%rst% CAIE exam papers %it%quickly and efficiently^^!%rst% %tRED%^<^<%rst%
 echo.
 echo.                                             %tred%____________
 echo.                 %tYLW%╭──────────────────────────%tred%┬╯ ℹ️ About ╰┬%tYLW%───────────────────────────╮
@@ -280,7 +280,7 @@ echo.                 │   %THL%2 ^>%rst% ❓ Wiki/Help Page         %THL%│  
 echo.                 │                                                                   %tYLW%│
 echo.                 │                        %THL%%HL% 5 ^> Join Discord^^! %rst%                        %tYLW%│
 echo.                 │                                                                   │
-echo.                 ╰───────────────────────────────────────────────────── %THL%Version %version% %tYLW%─╯%rst%
+echo.                 ╰─────────────────────────────────────────────────── %THL%Version %version% %tYLW%─╯%rst%
 echo.
 echo.
 echo.%gray%                                                                                                  %rst%
@@ -309,13 +309,14 @@ echo. [73C%TGRN%│                   │%RST%
 echo. [73C%TGRN%│%HL%%Subject%_%Session%%Year%_[qp+ms]_%Variant%%bRST%│%RST%
 echo. [73C%TGRN%│                   │%RST%
 echo. [73C%TGRN%╰───────────────────╯%RST%
-if "%qp%" == "ON " start https://dynamicpapers.com/wp-content/uploads/2015/09/%Subject%_%Session%%Year%_qp_%Variant%.pdf
-if "%ms%" == "ON " start https://dynamicpapers.com/wp-content/uploads/2015/09/%Subject%_%Session%%Year%_ms_%Variant%.pdf
-if "%gt%" == "ON " start https://dynamicpapers.com/wp-content/uploads/2015/09/%Subject%_%Session%%Year%_gt.pdf
+if "%qp%" == "ON " start https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/%Subject%_%Session%%Year%_qp_%Variant%.pdf
+if "%ms%" == "ON " start https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/%Subject%_%Session%%Year%_ms_%Variant%.pdf
+if "%gt%" == "ON " start https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/%Subject%_%Session%%Year%_gt.pdf
 if "%er%" == "ON " start https://dynamicpapers.com/wp-content/uploads/2015/09/%Subject%_%Session%%Year%_er.pdf
 if "%YouTube%" == "ON " start https://www.youtube.com/results?search_query=%Subject%+%Session%%Year%+%Variant%
 timeout /t 3 >NUL
 goto :home
+
 :DOWNLOAD
 ::Sets the values from %Session% into full month names
 if "%Session%" == "s" set month=May June
@@ -330,19 +331,20 @@ echo. [73C│                   │
 echo. [73C│                   │
 echo. [73C│                   │
 echo. [73C╰───────────────────╯%RST%[5A
+if "%YouTube%" == "ON " start https://www.youtube.com/results?search_query=%Subject%+%Session%%Year%+%Variant%
 if "%qp%" == "ON " (
 	echo. [73C│ %RST%Question Paper ^>%TRED%❌%TYLW%│
-    curl -s https://dynamicpapers.com/wp-content/uploads/2015/09/%Subject%_%Session%%Year%_qp_%Variant%.pdf > "..\Past Papers"\%SUBJECT%\20%YEAR%\"%MONTH%"\%Subject%_%Session%%Year%_qp_%Variant%.pdf
+    curl -s https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/%Subject%_%Session%%Year%_qp_%Variant%.pdf > "..\Past Papers"\%SUBJECT%\20%YEAR%\"%MONTH%"\%Subject%_%Session%%Year%_qp_%Variant%.pdf
     echo. [A[73C%TYLW%│ %RST%Question Paper ^>%TGRN%✔️%TYLW%│
 )
 if "%ms%" == "ON " (
 	echo. [73C│ %RST%Mark Scheme    ^>%TRED%❌%TYLW%│
-	curl -s https://dynamicpapers.com/wp-content/uploads/2015/09/%Subject%_%Session%%Year%_ms_%Variant%.pdf > "..\Past Papers"\%SUBJECT%\20%YEAR%\"%MONTH%"\%Subject%_%Session%%Year%_ms_%Variant%.pdf
+	curl -s https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/%Subject%_%Session%%Year%_ms_%Variant%.pdf > "..\Past Papers"\%SUBJECT%\20%YEAR%\"%MONTH%"\%Subject%_%Session%%Year%_ms_%Variant%.pdf
 	echo. [A[73C%TYLW%│ %RST%Mark Scheme    ^>%TGRN%✔️%TYLW%│
 )
 if "%gt%" == "ON " (
 	echo. [73C│ %RST%Grade Thres.   ^>%TRED%❌%TYLW%│
-	curl -s https://dynamicpapers.com/wp-content/uploads/2015/09/%Subject%_%Session%%Year%_gt.pdf > "..\Past Papers"\%SUBJECT%\20%YEAR%\"%MONTH%"\%Subject%_%Session%%Year%_gt.pdf
+	curl -s https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/%Subject%_%Session%%Year%_gt.pdf > "..\Past Papers"\%SUBJECT%\20%YEAR%\"%MONTH%"\%Subject%_%Session%%Year%_gt.pdf
 	echo. [A[73C%TYLW%│ %RST%Grade Thres.   ^>%TGRN%✔️%TYLW%│
 )
 if "%er%" == "ON " (
@@ -425,11 +427,13 @@ echo. [73C%TYLW%│   the paper is    │%RST%
 echo. [73C%TYLW%│   available...    │%RST%
 echo. [73C%TYLW%│                   │%RST%
 echo. [73C%TYLW%╰───────────────────╯%RST%
-curl --head --silent --fail https://dynamicpapers.com/wp-content/uploads/2015/09/%Subject%_%Session%%Year%_qp_%Variant%.pdf > nul
-if %errorlevel% NEQ 0 (
-    if errorlevel 1 goto :e4 
+
+for /f %%i in ('curl -Is -X GET -o NUL -w "%%{http_code}" https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/%Subject%_%Session%%Year%_qp_%Variant%.pdf') do set RES=%%i
+if "%RES%" neq "200" (
+    goto :e4
 )
 goto :eof
+
 ::Checks If All Files Are Present
 :filecheck
 for %%F in (
