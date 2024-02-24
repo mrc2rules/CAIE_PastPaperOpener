@@ -9,7 +9,7 @@
 ::=====Initialization=====
 MODE 100, 38
 chcp 65001 >nul
-set Version=1.5
+set Version=1.5.1
 title CAIE PastPaperOpener v%version%
 call :filecheck
 "plugins\NoResize"
