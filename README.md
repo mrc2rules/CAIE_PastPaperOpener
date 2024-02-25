@@ -23,7 +23,7 @@ CAIE PastPaperOpener lets you access qp, ms, gt or er (even search it on YouTube
 
 Whether you want to view or download the papers, all you need to do is enter the paper code _once_! Scroll down for usage examples
 
-The program relies on the [Dynamic Papers](https://dynamicpapers.com/) website.
+The program relies on the [PapaCambridge](https://papacambridge.com/) website.
 
 [**Click here to download »»**](https://github.com/mrc2rules/CAIE_PastPapersOpener/releases/latest)
 
