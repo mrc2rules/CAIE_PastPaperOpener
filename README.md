@@ -59,7 +59,7 @@ The changelogs can be [**found here »»**](https://github.com/mrc2rules/CAIE_Pa
 
 ## Installation
 > [!IMPORTANT]
-> Apps with `.exe` file format like this app, trigger a warning from Windows and your browser, whether they are harmful or not. This means actual harmless apps get blocked unfortunately.
+> Apps with `.exe` file format like this app, may trigger a warning from Windows and your browser, whether they are harmful or not. This means actual harmless apps get blocked unfortunately (false positives).
 > 
 > You can safely ignore it.
 ### Steps
