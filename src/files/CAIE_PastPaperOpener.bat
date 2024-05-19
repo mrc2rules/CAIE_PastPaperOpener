@@ -24,7 +24,7 @@ call :ascii
 call color
 
 ::Sets Up config.txt On First Time Start
-IF NOT EXIST config.txt (call :setconfig) >nul
+IF NOT EXIST config.txt (call :setconfig) & (start https://github.com/mrc2rules/CAIE_PastPaperOpener/wiki) >nul
 call :readconfig
 
 ::Background 
