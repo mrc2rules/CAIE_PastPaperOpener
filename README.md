@@ -36,12 +36,11 @@ The program relies on the [PapaCambridge](https://papacambridge.com/) website.
 - 🎚️ Toggle confirmation popup and default mode settings
   
 **Extras:-**
-- 🖼️ Set a custom wallpaper
-- 🍏 Change the logo from 3 options
+- 🖼️ Set a custom wallpaper and change logo
 
 ### Planned Features
 - [ ] 💾 Ability to download different types of resources other than just papers
-- [ ] 📂 Ability to download papers to a _selected_ directory
+- [ ] 📂 Advanced paper generating mechanism, combining multiple years of papers according to the users choice. Print Ready
 - [ ] 🔎 Ability to search for questions
 
 The changelogs can be [**found here »»**](https://github.com/mrc2rules/CAIE_PastPapersOpener/blob/main/CHANGELOG.md)
