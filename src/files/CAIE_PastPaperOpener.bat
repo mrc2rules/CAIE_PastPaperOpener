@@ -117,7 +117,7 @@ if /I "%Year%"=="B" echo.[A[3C[60X[2A[65X[A&goto :Session
 echo.!Year!| > nul findstr "^[0-9][0-9]$" || goto :e1
 
 call :papercheck
-if "%prompt%" == "DISABLED" goto :%mode%
+if "%pprconfirm%" == "DISABLED" goto :%mode%
 
 ::=====Confirmation Prompt=====
 :confirm
@@ -136,38 +136,39 @@ if %errorlevel% == 1 goto :%mode%
 if %errorlevel% == 2 goto :home
 
 :settings
-if "%prompt%" == "ENABLED " (set color1=%dGRN%) else (set color1=%dRED%)
+if "%pprconfirm%" == "ENABLED " (set color1=%dGRN%) else (set color1=%dRED%)
 if "%defmode%" == "PREVIEW " (set color2=%dGRN%) else (set color2=%dRED%)
 if "%logo%" == "logo1" (set color3=%dGRN% 1 %dRED% 2 %dRED% 3 %rst%)
 if "%logo%" == "logo2" (set color3=%dRED% 1 %dGRN% 2 %dRED% 3 %rst%)
 if "%logo%" == "logo3" (set color3=%dRED% 1 %dRED% 2 %dGRN% 3 %rst%)
-if "%qp%" == "ON " (set color4=[38;5;122m) else (set color4=%tGRAY%)
-if "%ms%" == "ON " (set color5=[38;5;122m) else (set color5=%tGRAY%)
-if "%gt%" == "ON " (set color6=[38;5;122m) else (set color6=%tGRAY%)
-if "%er%" == "ON " (set color7=[38;5;122m) else (set color7=%tGRAY%)
+if "%seldownfolder%" == "ENABLED " (set color4=%dGRN%) else (set color4=%dRED%)
+if "%qp%" == "ON " (set color5=[38;5;122m) else (set color5=%tGRAY%)
+if "%ms%" == "ON " (set color6=[38;5;122m) else (set color6=%tGRAY%)
+if "%gt%" == "ON " (set color7=[38;5;122m) else (set color7=%tGRAY%)
+if "%er%" == "ON " (set color8=[38;5;122m) else (set color8=%tGRAY%)
 cls
 echo.%gray%                                                                                                  %rst%[38;5;123m
 %image% %logo%
-echo.                                            %tred%______________
-echo.             %tYLW%╭─────────────────────────────%tred%┬╯ ☰ Settings ╰┬%tYLW%────────────────────────────╮
-echo.             │                                                                         │
-echo.             │                                                                         │
-echo.             │ %THL%1 ^>%rst% Confirmation Prompt - %color1%%prompt% %rst% %tgray%│%THL% 4 ^>%rst% 🌳 Set a Background           %tYLW%│
-echo.             │                                     %tgray%│%THL%                                   %tYLW%│
-echo.             │ %THL%2 ^>%rst% Default Mode        - %color2%%defmode% %rst% %tgray%│%THL% 5 ^>%rst% 🗑️ Remove Background         %tYLW%│
-echo.             │                                     %tgray%│%THL%                                   %tYLW%│
-echo.             │ %THL%3 ^>%rst% Logo                - %color3% %tgray%│%THL%                                   %tYLW%│
-echo.             │                                                                         │
-echo.             │                                                                         │
-echo.             ╰───────────────────────────────────────────────────────── %THL%Version %version% %tYLW%─╯
+echo.                                           %tred%______________
+echo.         %tYLW%╭────────────────────────────────%tred%┬╯ ☰ Settings ╰┬%tYLW%────────────────────────────────╮
+echo.         │                                                                                │
+echo.         │                                     %tgray%│%THL%                                          %tYLW%│
+echo.         │ %THL%1 ^>%rst% Confirmation Prompt - %color1%%pprconfirm% %rst% %tgray%│%THL% 4 ^>%rst% 📂 Select Download Folder - %color4%%seldownfolder% %RST%%tYLW%│
+echo.         │                                     %tgray%│%THL%                                          %tYLW%│
+echo.         │ %THL%2 ^>%rst% Default Mode        - %color2%%defmode% %rst% %tgray%│%THL% 5 ^>%rst% 🌳 Set a Background                  %tYLW%│
+echo.         │                                     %tgray%│%THL%                                          %tYLW%│
+echo.         │ %THL%3 ^>%rst% Logo                - %color3% %tgray%│%THL% 6 ^>%rst% 🗑️ Remove Background                %tYLW%│
+echo.         │                                     %tgray%│%THL%                                          %tYLW%│
+echo.         │                                                                                │
+echo.         ╰──────────────────────────────────────────────────────────────── %THL%Version %version% %tYLW%─╯
 echo.
-echo.                       %color4%┌────────────────%hl%%tred%┃  Toggle Paper Type  ┃%rst%%color7%────────────────┐%rst%
-echo.                       %color4%│           %color5%┌─────────┘        %color6%│                        %color7%│
-echo.                       %color4%│           %color5%│                  %color6%└──────────┐             %color7%│
-echo.       %color4%╭───────────────┴──╮  %color5%╭─────┴─────────╮  %color6%╭────────────────┴──╮  %color7%╭───────┴───────────╮
-echo.       %color4%│  Question Paper  │  %color5%│  Mark Scheme  │  %color6%│  Grade Threshold  │  %color7%│  Examiner Report  │
-echo.       %color4%╰─────┬────────────╯  %color5%╰───────────────╯  %color6%╰───────────────────╯  %color7%╰───────────────────╯%rst%
-echo.             └▸ Q                 └▸ M                 └▸ G                    └▸ E
+echo.                        %color5%┌────────────────%hl%%tred%┃  Toggle Paper Type  ┃%rst%%color7%────────────────┐%rst%
+echo.                        %color5%│           %color6%┌─────────┘        %color7%│                        %color8%│
+echo.                        %color5%│           %color6%│                  %color7%└──────────┐             %color8%│
+echo.        %color5%╭───────────────┴──╮  %color6%╭─────┴─────────╮  %color7%╭────────────────┴──╮  %color8%╭───────┴───────────╮
+echo.        %color5%│  Question Paper  │  %color6%│  Mark Scheme  │  %color7%│  Grade Threshold  │  %color8%│  Examiner Report  │
+echo.        %color5%╰─────┬────────────╯  %color6%╰───────────────╯  %color7%╰───────────────────╯  %color8%╰───────────────────╯%rst%
+echo.              └▸ Q                 └▸ M                 └▸ G                    └▸ E
 echo.
 echo.  ╭──────────────────────────────────────────────────────────────────────────────────────────────╮
 echo.  │                                                                                              │
@@ -175,7 +176,7 @@ echo.  │                                                                      
 echo.  │                                                                                              │
 echo.  ╰───────────────────────────────────────────────────────────────────────────%THL%%HL%┨ B ^> Home Page ┠%RST%──╯[3A
 <nul set /p "=‎‎│‎|%tYLW%+%rst%|  %THL%Press a key%RST% to toggle settings   >> "
-choice /N /c B12345QMGE
+choice /N /c B123456QMGE
 if %errorlevel% == 1 goto :home
 if %errorlevel% == 2 goto :set1
 if %errorlevel% == 3 goto :set2
@@ -186,13 +187,14 @@ if %errorlevel% == 7 goto :set6
 if %errorlevel% == 8 goto :set7
 if %errorlevel% == 9 goto :set8
 if %errorlevel% == 10 goto :set9
+if %errorlevel% == 11 goto :set10
 
 ::Changes Settings Value In config.txt
 :set1
-if "%prompt%" == "ENABLED " (
-    set prompt=DISABLED
-) else if "%prompt%" == "DISABLED" (
-    set prompt=ENABLED 
+if "%pprconfirm%" == "ENABLED " (
+    set pprconfirm=DISABLED
+) else if "%pprconfirm%" == "DISABLED" (
+    set pprconfirm=ENABLED 
 )
 call :saveSettings
 goto :Settings
@@ -215,6 +217,14 @@ if "%logo%" == "logo1" (
 call :saveSettings
 goto :Settings
 :set4
+if "%seldownfolder%" == "ENABLED " (
+    set seldownfolder=DISABLED
+) else if "%seldownfolder%" == "DISABLED" (
+    set seldownfolder=ENABLED 
+)
+call :saveSettings
+goto :Settings
+:set5
 chcp 437 > nul
 set "%bg%"==""
 set ps_bg=bg.ps1
@@ -228,9 +238,9 @@ for /F "tokens=* usebackq" %%a in (`powershell -executionpolicy bypass -file %ps
 del %ps_bg%
 chcp 65001 >nul
 if not "%selbg%"=="" (set bg=%selbg%)&(call :savesettings)&(goto :bg) else (goto :settings)
-:set5
-set bg= &call :savesettings&goto :bg
 :set6
+set bg= &call :savesettings&goto :bg
+:set7
 if "%qp%" == "ON " (
     set qp=OFF
 ) else if "%qp%" == "OFF" (
@@ -238,7 +248,7 @@ if "%qp%" == "ON " (
 )
 call :saveSettings
 goto :Settings
-:set7
+:set8
 if "%ms%" == "ON " (
     set ms=OFF
 ) else if "%ms%" == "OFF" (
@@ -246,7 +256,7 @@ if "%ms%" == "ON " (
 )
 call :saveSettings
 goto :Settings
-:set8
+:set9
 if "%gt%" == "ON " (
     set gt=OFF
 ) else if "%gt%" == "OFF" (
@@ -254,7 +264,7 @@ if "%gt%" == "ON " (
 )
 call :saveSettings
 goto :Settings
-:set9
+:set10
 if "%er%" == "ON " (
     set er=OFF
 ) else if "%er%" == "OFF" (
@@ -318,12 +328,20 @@ timeout /t 3 >NUL
 goto :home
 
 :DOWNLOAD
+chcp 437 > nul
+if "%seldownfolder%" == "DISABLED" set path="..\Past Papers"\%SUBJECT%\20%YEAR%\"%MONTH%"& goto :dfunc
+set "psCommand="(new-object -COM 'Shell.Application').BrowseForFolder(0,'Choose the folder where you want to save the papers.',0,0).self.path"" 
+for /f "usebackq delims=" %%I in (`powershell %psCommand%`) do set "downpath=%%I"
+chcp 65001 >nul
+if "%downpath%"=="" goto :home
+
+:dfunc
 ::Sets the values from %Session% into full month names
 if "%Session%" == "s" set month=May June
 if "%Session%" == "m" set month=Feb March
 if "%Session%" == "w" set month=Oct Nov
 ::Creates organized directories
-if NOT exist "..\Past Papers\%SUBJECT%\20%YEAR%\%MONTH%\" mkdir "..\Past Papers\%SUBJECT%\20%YEAR%\%MONTH%" >nul
+if NOT exist "%downpath%\Past Papers\%SUBJECT%\20%YEAR%\%MONTH%" mkdir "%downpath%\Past Papers\%SUBJECT%\20%YEAR%\%MONTH%" >nul
 echo. [7A[73C%TYLW%╭───────────────────╮
 echo. [73C│   Downloading...  │
 echo. [73C│                   │
@@ -334,26 +352,26 @@ echo. [73C╰───────────────────╯%RST%
 if "%YouTube%" == "ON " start https://www.youtube.com/results?search_query=%Subject%+%Session%%Year%+%Variant%
 if "%qp%" == "ON " (
 	echo. [73C│ %RST%Question Paper ^>%TRED%❌%TYLW%│
-    curl -s https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/%Subject%_%Session%%Year%_qp_%Variant%.pdf > "..\Past Papers"\%SUBJECT%\20%YEAR%\"%MONTH%"\%Subject%_%Session%%Year%_qp_%Variant%.pdf
+    curl -s https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/%Subject%_%Session%%Year%_qp_%Variant%.pdf > "%downpath%\Past Papers\%SUBJECT%\20%YEAR%\%MONTH%\%Subject%_%Session%%Year%_qp_%Variant%.pdf"
     echo. [A[73C%TYLW%│ %RST%Question Paper ^>%TGRN%✔️%TYLW%│
 )
 if "%ms%" == "ON " (
 	echo. [73C│ %RST%Mark Scheme    ^>%TRED%❌%TYLW%│
-	curl -s https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/%Subject%_%Session%%Year%_ms_%Variant%.pdf > "..\Past Papers"\%SUBJECT%\20%YEAR%\"%MONTH%"\%Subject%_%Session%%Year%_ms_%Variant%.pdf
+	curl -s https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/%Subject%_%Session%%Year%_ms_%Variant%.pdf > "%downpath%\Past Papers\%SUBJECT%\20%YEAR%\%MONTH%\%Subject%_%Session%%Year%_ms_%Variant%.pdf"
 	echo. [A[73C%TYLW%│ %RST%Mark Scheme    ^>%TGRN%✔️%TYLW%│
 )
 if "%gt%" == "ON " (
 	echo. [73C│ %RST%Grade Thres.   ^>%TRED%❌%TYLW%│
-	curl -s https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/%Subject%_%Session%%Year%_gt.pdf > "..\Past Papers"\%SUBJECT%\20%YEAR%\"%MONTH%"\%Subject%_%Session%%Year%_gt.pdf
+	curl -s https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload/%Subject%_%Session%%Year%_gt.pdf > "%downpath%\Past Papers\%SUBJECT%\20%YEAR%\%MONTH%\%Subject%_%Session%%Year%_gt.pdf"
 	echo. [A[73C%TYLW%│ %RST%Grade Thres.   ^>%TGRN%✔️%TYLW%│
 )
 if "%er%" == "ON " (
 	echo. [73C│ %RST%Examiner Rep.  ^>%TRED%❌%TYLW%│
-	curl -s https://dynamicpapers.com/wp-content/uploads/2015/09/%Subject%_%Session%%Year%_er.pdf > "..\Past Papers"\%SUBJECT%\20%YEAR%\"%MONTH%"\%Subject%_%Session%%Year%_er.pdf
+	curl -s https://dynamicpapers.com/wp-content/uploads/2015/09/%Subject%_%Session%%Year%_er.pdf > "%downpath%\Past Papers\%SUBJECT%\20%YEAR%\%MONTH%\%Subject%_%Session%%Year%_er.pdf"
 	echo. [A[73C%TYLW%│ %RST%Examiner Rep.  ^>%TGRN%✔️%TYLW%│
 )
-::Opens the past paper in explorer, highlighted
-explorer.exe "..\Past Papers"\%SUBJECT%\20%YEAR%\"%MONTH%"\
+::Opens the past paper in explorer
+explorer.exe "%downpath%\Past Papers\%SUBJECT%\20%YEAR%\"%MONTH%"\"
 timeout /t 5 >NUL
 goto :home
 
@@ -365,9 +383,10 @@ start tempupdater.bat
 exit
 
 ::=====Configuration Settings=====
-::Settings Per Line - Confirmation Prompt, Default Mode, YouTube, Logo, Background, QP, MS, GT, ER
+::Settings Per Line - Confirmation Prompt,Custom Download Folder, Default Mode, YouTube, Logo, Background, QP, MS, GT, ER
 :setconfig
 (
+  echo.DISABLED
   echo.DISABLED
   echo.PREVIEW 
   echo.OFF
@@ -383,22 +402,24 @@ goto :eof
 :readconfig
 for /f "tokens=*" %%L in (config.txt) do (
     set /a line+=1
-    if !line!==1 set "prompt=%%L"
-    if !line!==2 set "defmode=%%L" 
-    if !line!==3 set "YouTube=%%L"
-    if !line!==4 set "logo=%%L"
-	if !line!==5 set "bg=%%L"
-	if !line!==6 set "qp=%%L"
-	if !line!==7 set "ms=%%L"
-	if !line!==8 set "gt=%%L"
-	if !line!==9 set "er=%%L"
+    if !line!==1 set "pprconfirm=%%L"
+    if !line!==2 set "seldownfolder=%%L"
+    if !line!==3 set "defmode=%%L" 
+    if !line!==4 set "YouTube=%%L"
+    if !line!==5 set "logo=%%L"
+	if !line!==6 set "bg=%%L"
+	if !line!==7 set "qp=%%L"
+	if !line!==8 set "ms=%%L"
+	if !line!==9 set "gt=%%L"
+	if !line!==10 set "er=%%L"
 )
 set mode=%defmode%
 goto :eof
 ::Saves Data From Variables Into config.txt
 :saveSettings
 (
-  echo.%prompt%
+  echo.%pprconfirm%
+  echo.%seldownfolder%
   echo.%defmode%
   echo.%YouTube%
   echo.%logo%
